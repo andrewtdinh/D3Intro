@@ -32,3 +32,11 @@ sampleSVG.append("circle")
         .attr("cx", 30)
         .style("fill", "blue");
     })
+    .on("mouseout", function(){d3.select(this)
+      .transition()
+        .delay(30)
+        .duration(1000)
+        .attr("r", 40)
+        .attr("cx", 50)
+        .style("fill", "white");
+    })
