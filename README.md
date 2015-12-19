@@ -1,3 +1,3 @@
-## My game of Tic Tac Toe
+## My test drive of D3
 
-This exercise uses HTML, CSS, and jQuery
+This exercise uses HTML and D3.js
