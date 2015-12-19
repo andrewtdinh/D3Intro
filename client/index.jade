@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')      
+    title Tic-Tac-Toe
+    link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
+    link(rel='shortcut icon', href='/favicon.ico')
+  body
+    h1#title Tic-Tac-Toe
+    
+    #controls
+      button#reset 1. Reset
+      button#start 2. Start
+        
+    table
+      tbody
+        tr
+          td
+          td
+          td
+        tr
+          td
+          td
+          td
+        tr
+          td
+          td
+          td
+    #chooser
+      p#colorMsg Click on a colored rectangle to choose another color:
+      label Player 1: &nbsp;
+      input#p1-choose(type='color', value='#ff33cc')
+      br
+      label Player 2: &nbsp;
+      input#p2-choose(type='color', value='#33ccff')
+    #players
+      #p1.player P1 
+      #p2.player P2
+    h2#game-verdict
+    script(src='/vendor/jquery/dist/jquery.min.js')
+    script(src='/vendor/lodash/lodash.min.js')
+    script(src=isProd ? '/index.min.js' : '/index.js')

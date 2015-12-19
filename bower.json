@@ -1,0 +1,14 @@
+{
+  "name": "Tic-Tac-Toe",
+  "version": "0.0.1",
+  "homepage": "http://andrewtdinh.com",
+  "authors": [
+    "Andrew Dinh <andrewdinh74@yahoo.com>"
+  ],
+  "license": "BSD",
+  "dependencies": {
+    "lodash": "~3.6.0",
+    "font-awesome": "~4.3.0",
+    "jquery": "~2.1.3"
+  }
+}
