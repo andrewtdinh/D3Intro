@@ -101,3 +101,5 @@ function animateSecondStep(){
       .duration(1000)
       .attr("r", 40);
 };
+
+// Multiple animated circles:
