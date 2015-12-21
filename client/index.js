@@ -30,7 +30,7 @@ sampleSVG.append("circle")
         .delay(30)
         .duration(1000)
         .attr("r", 10)
-        .attr("cx", 30)
+        .attr("cx", 50)
         .style("fill", "blue");
     })
     .on("mouseout", function(){d3.select(this)
@@ -59,7 +59,8 @@ sampleSVG.append("circle")
     .on("mousedown", animate);
 
 function animate() {
-    d3.select(this).transition()
+    d3.select(this)
+      .transition()
         .duration(1000)
         .attr("r", 10)
       .transition()
