@@ -62,8 +62,10 @@ function animate() {
     d3.select(this)
       .transition()
         .duration(1000)
+        .style("fill", "pink")
         .attr("r", 10)
       .transition()
         .delay(1000)
-        .attr("r", 40);
+        .attr("r", 40)
+        .style("fill", "white");
 };
