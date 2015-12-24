@@ -126,7 +126,9 @@ function animateSecondStep(){
 //   .attr("x", function(d, i){return i*80})
 //   .attr("y", 20);
 // -------End of non-working code
+var radii = [15, 25, 35];
 var circle = d3.selectAll(".demoCircles")
 circle.style('fill', 'steelblue');
-circle.attr('r', function(){return 10 + Math.random() * 15;})
+circle.data(radii);
+circle.attr('r', function(d){return d;})
 circle.attr('cx', function(){return Math.random() * 720;})
