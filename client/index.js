@@ -130,5 +130,5 @@ var radii = [15, 25, 35];
 var circle = d3.selectAll(".demoCircles")
 circle.style('fill', 'steelblue');
 circle.data(radii);
-circle.attr('r', function(d){return d;})
-circle.attr('cx', function(){return Math.random() * 720;})
+circle.attr('r', function(data){return data;})
+circle.attr('cx', function(data, i){return i * 100 + 30;})
