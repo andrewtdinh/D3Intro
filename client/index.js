@@ -73,15 +73,15 @@ function animate() {
 // A better way to animation chain:
 var sampleSVG = d3.select("#chain2")
   .append("svg")
-  .attr("width", 100)
-  .attr("height", 100);
+  .attr("width", 50)
+  .attr("height", 50);
 
 sampleSVG.append("circle")
   .style("stroke", "gray")
   .style("fill", "white")
-  .attr("r", 40)
-  .attr("cx", 50)
-  .attr("cy", 50)
+  .attr("r", 20)
+  .attr("cx", 25)
+  .attr("cy", 25)
   .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
   .on("mouseout", function(){d3.select(this).style("fill", "white");})
   .on("mousedown", animateFirstStep);
@@ -91,7 +91,7 @@ function animateFirstStep(){
     .transition()
       .delay(0)
       .duration(1000)
-      .attr("r", 10)
+      .attr("r", 5)
       .each("end", animateSecondStep);
 };
 
@@ -99,7 +99,7 @@ function animateSecondStep(){
   d3.select(this)
     .transition()
       .duration(1000)
-      .attr("r", 40);
+      .attr("r", 20);
 };
 
 // Multiple animated circles:
@@ -107,13 +107,13 @@ var dataset = [],
 i = 0;
 
 for(i=0; i<5; i++){
-  dataset.push(Math.round(Math.random()*100));
+  dataset.push(Math.round(Math.random()*500));
 }
 
 var sampleSVG = d3.select('#chain3')
   .append("svg")
   .attr("width", 400)
-  .attr("height", 75);
+  .attr("height", 50);
 
 sampleSVG.selectAll("circle")
     .data(dataset)
