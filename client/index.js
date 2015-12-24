@@ -104,27 +104,29 @@ function animateSecondStep(){
 
 // Multiple animated circles:
 // ---Not working code:
-// var dataset = [],
-// i = 0;
-//
-// for(i=0; i<5; i++){
-//   dataset.push(Math.round(Math.random()*100));
-// }
-//
-// var sampleSVG = d3.select("#chain3")
-//   .append("svg")
-//   .attr("width", 400)
-//   .attr("height", 75);
-//
-// sampleSVG.selectAll("circle")
-//   .data(dataset)
-//   .enter().append("circle")
-//   .style("stroke", "gray")
-//   .style("fill", "white")
-//   .attr("height", 40)
-//   .attr("width", 75)
-//   .attr("x", function(d, i){return i*80})
-//   .attr("y", 20);
+var dataset = [],
+i = 0;
+
+for(i=0; i<5; i++){
+  dataset.push(Math.round(Math.random()*100));
+}
+
+var sampleSVG = d3.select('#chain3')
+  .append("svg")
+  .attr("width", 400)
+  .attr("height", 75);
+
+sampleSVG.selectAll("circle")
+    .data(dataset)
+  .enter().append("circle")
+    .style("stroke", "gray")
+    .style("fill", "white")
+    .attr("height", 40)
+    .attr("width", 75)
+    .attr("cx", function(d, i){return 20 + i * 80;})
+    .attr("cy", 20)
+    .attr('r', 15);
+
 // -------End of non-working code
 var radii = [15, 25, 35];
 var circle = d3.selectAll(".demoCircles")
