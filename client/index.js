@@ -110,7 +110,7 @@ for(i=0; i<5; i++){
   dataset.push(Math.round(Math.random()*100));
 }
 
-var sampleSVG = d3.select("#viz")
+var sampleSVG = d3.select("#chain3")
   .append("svg")
   .attr("width", 400)
   .attr("height", 75);
