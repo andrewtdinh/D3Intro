@@ -119,12 +119,12 @@ sampleSVG.selectAll("circle")
     .data(dataset)
   .enter().append("circle")
     .style("stroke", "gray")
-    .style("fill", "white")
+    .style("fill", "blue")
     .attr("height", 40)
     .attr("width", 75)
     .attr("cx", function(d, i){return 20 + i * 80;})
     .attr("cy", 20)
-    .attr('r', 15);
+    .attr('r', function(d){return Math.sqrt(d);});
 
 // Multiple circles, not animated
 var radii = [15, 25, 35];
