@@ -103,7 +103,6 @@ function animateSecondStep(){
 };
 
 // Multiple animated circles:
-// ---Not working code:
 var dataset = [],
 i = 0;
 
@@ -127,7 +126,7 @@ sampleSVG.selectAll("circle")
     .attr("cy", 20)
     .attr('r', 15);
 
-// -------End of non-working code
+// Multiple circles, not animated
 var radii = [15, 25, 35];
 var circle = d3.selectAll(".demoCircles")
 circle.style('fill', 'steelblue');
