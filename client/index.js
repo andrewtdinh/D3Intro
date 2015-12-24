@@ -2,58 +2,58 @@
 // Simple Circle:
 var sampleSVG = d3.select("#simpleCircle")
   .append("svg")
-  .attr("width", 100)
-  .attr("height", 100);
+  .attr("width", 50)
+  .attr("height", 50);
 
 sampleSVG.append("circle")
   .style("stroke", "gray")
   .style("fill", "white")
-  .attr("r", 40)
-  .attr("cx", 50)
-  .attr("cy", 50)
+  .attr("r", 20)
+  .attr("cx", 25)
+  .attr("cy", 25)
   .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
   .on("mouseout", function(){d3.select(this).style("fill", "white");});
 // Animate Circle
 var sampleSVG = d3.select("#aniCircle")
   .append("svg")
-  .attr("width", 100)
-  .attr("height", 100);
+  .attr("width", 50)
+  .attr("height", 50);
 
 sampleSVG.append("circle")
     .style("stroke", "gray")
     .style("fill", "white")
-    .attr("r", 40)
-    .attr("cx", 50)
-    .attr("cy", 50)
+    .attr("r", 20)
+    .attr("cx", 25)
+    .attr("cy", 25)
     .on("mouseover", function(){d3.select(this)
       .transition()
         .delay(30)
         .duration(1000)
-        .attr("r", 10)
-        .attr("cx", 50)
+        .attr("r", 5)
+        .attr("cx", 25)
         .style("fill", "blue");
     })
     .on("mouseout", function(){d3.select(this)
       .transition()
         .delay(30)
         .duration(1000)
-        .attr("r", 40)
-        .attr("cx", 50)
+        .attr("r", 20)
+        .attr("cx", 25)
         .style("fill", "white");
     })
 
 // Animation chaining
 var sampleSVG = d3.select("#chain")
     .append("svg")
-    .attr("width", 100)
-    .attr("height", 100);
+    .attr("width", 50)
+    .attr("height", 50);
 
 sampleSVG.append("circle")
     .style("stroke", "gray")
     .style("fill", "white")
-    .attr("r", 40)
-    .attr("cx", 50)
-    .attr("cy", 50)
+    .attr("r", 20)
+    .attr("cx", 25)
+    .attr("cy", 25)
     .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
     .on("mouseout", function(){d3.select(this).style("fill", "white");})
     .on("mousedown", animate);
@@ -63,10 +63,10 @@ function animate() {
       .transition()
         .duration(1000)
         .style("fill", "pink")
-        .attr("r", 10)
+        .attr("r", 5)
       .transition()
         .delay(1000)
-        .attr("r", 40)
+        .attr("r", 20)
         .style("fill", "white");
 };
 
