@@ -126,3 +126,5 @@ function animateSecondStep(){
 //   .attr("x", function(d, i){return i*80})
 //   .attr("y", 20);
 // -------End of non-working code
+var circle = d3.selectAll(".demoCircles")
+circle.style('fill', 'steelblue');
