@@ -115,7 +115,7 @@ var sampleSVG = d3.select("#chain3")
   .attr("width", 400)
   .attr("height", 75);
 
-sampleSVG.selectAll("circle")
+sampleSVG.selectAll("svg")
   .data(dataset)
   .enter().append("circle")
   .style("stroke", "gray")
