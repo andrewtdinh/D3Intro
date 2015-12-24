@@ -128,4 +128,5 @@ function animateSecondStep(){
 // -------End of non-working code
 var circle = d3.selectAll(".demoCircles")
 circle.style('fill', 'steelblue');
-circle.attr('r', 25);
+circle.attr('r', function(){return Math.random() * 15;})
+circle.attr('cx', function(){return Math.random() * 720;})
