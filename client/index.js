@@ -103,24 +103,26 @@ function animateSecondStep(){
 };
 
 // Multiple animated circles:
-var dataset = [],
-i = 0;
-
-for(i=0; i<5; i++){
-  dataset.push(Math.round(Math.random()*100));
-}
-
-var sampleSVG = d3.select("#chain3")
-  .append("svg")
-  .attr("width", 400)
-  .attr("height", 75);
-
-sampleSVG.selectAll("circle")
-  .data(dataset)
-  .enter().append("circle")
-  .style("stroke", "gray")
-  .style("fill", "white")
-  .attr("height", 40)
-  .attr("width", 75)
-  .attr("x", function(d, i){return i*80})
-  .attr("y", 20);
+// ---Not working code:
+// var dataset = [],
+// i = 0;
+//
+// for(i=0; i<5; i++){
+//   dataset.push(Math.round(Math.random()*100));
+// }
+//
+// var sampleSVG = d3.select("#chain3")
+//   .append("svg")
+//   .attr("width", 400)
+//   .attr("height", 75);
+//
+// sampleSVG.selectAll("circle")
+//   .data(dataset)
+//   .enter().append("circle")
+//   .style("stroke", "gray")
+//   .style("fill", "white")
+//   .attr("height", 40)
+//   .attr("width", 75)
+//   .attr("x", function(d, i){return i*80})
+//   .attr("y", 20);
+// -------End of non-working code
