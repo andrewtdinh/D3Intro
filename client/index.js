@@ -147,20 +147,20 @@ for (i = 0; i < 5; i++) {
 }
 
 d3.select("#bind2D")
-.append("table")
-.style("border-collapse", "collapse")
-.style("border", "2px black solid")
+  .append("table")
+  .style("border-collapse", "collapse")
+  .style("border", "2px black solid")
 
-.selectAll("tr")
-.data(dtset)
-.enter().append("tr")
+  .selectAll("tr")
+  .data(dtset)
+  .enter().append("tr")
 
-.selectAll("td")
-.data(function(d){return d;})
-.enter().append("td")
-.style("border", "1px black solid")
-.style("padding", "10px")
-.on("mouseover", function(){d3.select(this).style("background-color", "aliceblue")})
-.on("mouseout", function(){d3.select(this).style("background-color", "white")})
-.text(function(d){return d;})
-.style("font-size", "12px");
+  .selectAll("td")
+  .data(function(d){return d;})
+  .enter().append("td")
+  .style("border", "1px black solid")
+  .style("padding", "10px")
+  .on("mouseover", function(){d3.select(this).style("background-color", "aliceblue")})
+  .on("mouseout", function(){d3.select(this).style("background-color", "white")})
+  .text(function(d){return d;})
+  .style("font-size", "12px");
