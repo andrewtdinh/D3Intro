@@ -141,7 +141,7 @@ i, j;
 
 for (i = 0; i < 5; i++) {
   for (j = 0, tmpDataset = []; j < 3; j++) {
-    tmpDataset.push("Row:"+i+",Col:"+j);
+    tmpDataset.push("("+j+", "+i+")");
   }
   dtset.push(tmpDataset);
 }
