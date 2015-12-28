@@ -146,7 +146,7 @@ for (i = 0; i < 5; i++) {
     dataset.push(tmpDataset);
 }
 
-d3.select("#viz")
+d3.select("#bind2D")
     .append("table")
     .style("border-collapse", "collapse")
     .style("border", "2px black solid")
