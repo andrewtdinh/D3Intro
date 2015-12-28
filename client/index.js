@@ -135,32 +135,32 @@ circle.attr('r', function(data){return data;})
 circle.attr('cx', function(data, i){return i * 100 + 30;})
 
 //Binding 2D data:
-var dataset = [],
+var dtset = [],
 tmpDataset = [],
 i, j;
 
 for (i = 0; i < 5; i++) {
-    for (j = 0, tmpDataset = []; j < 3; j++) {
-        tmpDataset.push("Row:"+i+",Col:"+j);
-    }
-    dataset.push(tmpDataset);
+  for (j = 0, tmpDataset = []; j < 3; j++) {
+    tmpDataset.push("Row:"+i+",Col:"+j);
+  }
+  dtset.push(tmpDataset);
 }
 
 d3.select("#bind2D")
-    .append("table")
-    .style("border-collapse", "collapse")
-    .style("border", "2px black solid")
+.append("table")
+.style("border-collapse", "collapse")
+.style("border", "2px black solid")
 
-    .selectAll("tr")
-    .data(dataset)
-    .enter().append("tr")
+.selectAll("tr")
+.data(dtset)
+.enter().append("tr")
 
-    .selectAll("td")
-    .data(function(d){return d;})
-    .enter().append("td")
-    .style("border", "1px black solid")
-    .style("padding", "10px")
-    .on("mouseover", function(){d3.select(this).style("background-color", "aliceblue")})
-    .on("mouseout", function(){d3.select(this).style("background-color", "white")})
-    .text(function(d){return d;})
-    .style("font-size", "12px");
+.selectAll("td")
+.data(function(d){return d;})
+.enter().append("td")
+.style("border", "1px black solid")
+.style("padding", "10px")
+.on("mouseover", function(){d3.select(this).style("background-color", "aliceblue")})
+.on("mouseout", function(){d3.select(this).style("background-color", "white")})
+.text(function(d){return d;})
+.style("font-size", "12px");
