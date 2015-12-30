@@ -166,7 +166,7 @@ d3.select("#bind2D")
   .style("font-size", "12px");
 
 //Binding 2D data from an external csv file:
-d3.text("../data/auto_mpg_tmp.csv", function(datasetText) {
+d3.text("../data/auto_mpg.csv", function(datasetText) {
 
   var parsedCSV = d3.csv.parseRows(datasetText);
 
