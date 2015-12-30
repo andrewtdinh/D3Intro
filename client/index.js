@@ -168,9 +168,9 @@ d3.select("#bind2D")
 //Binding 2D data from an external csv file:
 d3.text("../data/auto_mpg_tmp.csv", function(datasetText) {
 
-var parsedCSV = d3.csv.parseRows(datasetText);
+  var parsedCSV = d3.csv.parseRows(datasetText);
 
-var sampleHTML = d3.select("#viz")
+  var sampleHTML = d3.select("#viz")
     .append("table")
     .style("border-collapse", "collapse")
     .style("border", "2px black solid")
